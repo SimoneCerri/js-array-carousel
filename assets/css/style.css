@@ -1,0 +1,68 @@
+/* #region Common */
+*
+{
+    padding: 0;
+    bottom: 0;
+    box-sizing: border-box;
+}
+
+img
+{
+    max-width: 100%;
+}
+/* #endregion Common */
+
+
+/* #region Utilities */
+
+/* #endregion Utilities */
+
+
+/* #region MediaQuery */
+
+/* #endregion MediaQuery */
+
+
+/* #region Main */
+.slider
+{   
+    /* max-height: 200px; */
+    width: 800px;
+    margin: 0 auto;
+    position: relative;
+
+    
+    .prev,
+    .next
+    {
+        padding: 1em 1em;
+        border: none;
+        background-color: #3333336e;
+        border-radius: 50%;
+        position: absolute;
+    }
+
+    .prev
+    {
+        right: 50%;
+        bottom: 95%;
+    }
+
+    .next
+    {
+        right: 50%;
+        bottom: 5%;
+    }
+
+    .slides
+    {
+        img:not(.active)
+        {
+            display: none;
+        }
+    }
+}
+/* #endregion Main */
+
+
+
