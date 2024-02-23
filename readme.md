@@ -30,7 +30,7 @@ Costruiamo del carosello una versione statica contenente solamente un'immagine. 
     - hide all img exept the first.
 - Step N.3 : on CLICK change "active" img.
     - CLICK to next button for next img.
-    - CLICK to prev byutton for previous img.
+    - CLICK to prev button for previous img.
 - BONUS N.1 : fix the bug
     - about CLICK on prev (when you are on first img).
     - about CLICK on next (when you are on last img).

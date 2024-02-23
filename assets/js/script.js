@@ -14,6 +14,9 @@ let activeImage = 0 ;
 let slidesBox = document.querySelector(".slides");
 console.log(carouselImages,activeImage,slidesBox);
 
+let prevButton = document.querySelector(".prev");
+let nextButton = document.querySelector(".next");
+
 //FOR cycle with template literal.
 for (let index = 0; index < carouselImages.length; index++)
 {
@@ -25,5 +28,35 @@ for (let index = 0; index < carouselImages.length; index++)
     
     //put on htlm
     slidesBox.insertAdjacentHTML("beforeend",markup);
-    
+
 }
+
+//on CLICK change "active" img.
+
+//CLICK to next button for next img.
+prevButton.addEventListener
+("click",function()
+{
+    console.log("slide up to previous img");
+    activeImage--;
+    //change position of active class
+}
+)
+//CLICK to prev button for previous img.
+nextButton.addEventListener
+("click", function ()
+{
+    console.log("slide down to next img");
+    activeImage++;
+    //change position of active class
+    //remove from the last img
+    let currentImage = document.querySelector("img.active");
+    currentImage.classList.remove("active");
+    //add to the new one
+    let slidesNode = document.querySelectorAll(".slides img"); //select all img inside the NodeList
+    console.log(slidesNode);//NodeList
+    console.log(slidesBox);//Div
+    console.log(slidesNode[activeImage]);//img selected
+
+}
+)
