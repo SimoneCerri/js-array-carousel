@@ -38,6 +38,12 @@ prevButton.addEventListener //CLICK to next button for next img.
 {
     console.log("slide up to previous img");
     activeImage--;
+
+    //bug fix for the CLICK on prev when u are at first img.
+    if (activeImage < 0)
+    {
+        activeImage = carouselImages.length - 1;
+    };
     //change position of active class
     //remove from the last img
     let currentImage = document.querySelector("img.active");
@@ -48,14 +54,21 @@ prevButton.addEventListener //CLICK to next button for next img.
     console.log(slidesBox);//Div
     console.log(slidesNode[activeImage]);//img selected
     slidesNode[activeImage].classList.add("active");
+    
 }
-)
+);
 
 nextButton.addEventListener //CLICK to prev button for previous img.
 ("click", function ()
 {
     console.log("slide down to next img");
     activeImage++;
+
+    //bug fix for the CLICK on next when u are at last img.
+    if(activeImage > carouselImages.length - 1)
+    {
+        activeImage = 0;
+    };
     //change position of active class
     //remove from the last img
     let currentImage = document.querySelector("img.active");
@@ -66,9 +79,6 @@ nextButton.addEventListener //CLICK to prev button for previous img.
     console.log(slidesBox);//Div
     console.log(slidesNode[activeImage]);//img selected
     slidesNode[activeImage].classList.add("active");
-    if(activeImage > carouselImages.length - 1)
-    {
-        activeImage = 0;
-    }
+    
 }
-)
+);
