@@ -23,4 +23,7 @@ for (let index = 0; index < carouselImages.length; index++)
     let markup = ` <img src="./assets/img/${singleSlideImage}" alt="" class="${ index === activeImage   ? "active"  : ""  }"></img> `
     console.log(markup);
     
+    //put on htlm
+    slidesBox.insertAdjacentHTML("beforeend",markup);
+    
 }
