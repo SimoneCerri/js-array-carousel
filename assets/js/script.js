@@ -31,19 +31,27 @@ for (let index = 0; index < carouselImages.length; index++)
 
 }
 
-//on CLICK change "active" img.
 
-//CLICK to next button for next img.
-prevButton.addEventListener
+//on CLICK change "active" img.
+prevButton.addEventListener //CLICK to next button for next img.
 ("click",function()
 {
     console.log("slide up to previous img");
     activeImage--;
     //change position of active class
+    //remove from the last img
+    let currentImage = document.querySelector("img.active");
+    currentImage.classList.remove("active");
+    //add to the new one
+    let slidesNode = document.querySelectorAll(".slides img"); //select all img inside the NodeList
+    console.log(slidesNode);//NodeList
+    console.log(slidesBox);//Div
+    console.log(slidesNode[activeImage]);//img selected
+    slidesNode[activeImage].classList.add("active");
 }
 )
-//CLICK to prev button for previous img.
-nextButton.addEventListener
+
+nextButton.addEventListener //CLICK to prev button for previous img.
 ("click", function ()
 {
     console.log("slide down to next img");
@@ -57,6 +65,10 @@ nextButton.addEventListener
     console.log(slidesNode);//NodeList
     console.log(slidesBox);//Div
     console.log(slidesNode[activeImage]);//img selected
-
+    slidesNode[activeImage].classList.add("active");
+    if(activeImage > carouselImages.length - 1)
+    {
+        activeImage = 0;
+    }
 }
 )
