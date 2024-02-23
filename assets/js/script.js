@@ -15,8 +15,12 @@ let slidesBox = document.querySelector(".slides");
 console.log(carouselImages,activeImage,slidesBox);
 
 //FOR cycle with template literal.
-for (let index = 0; index < carouselImages.length; index++) {
+for (let index = 0; index < carouselImages.length; index++)
+{
     const singleSlideImage = carouselImages[index];
     console.log(singleSlideImage);
+
+    let markup = ` <img src="./assets/img/${singleSlideImage}" alt="" class="${ index === activeImage   ? "active"  : ""  }"></img> `
+    console.log(markup);
     
 }
