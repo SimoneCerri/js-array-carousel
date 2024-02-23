@@ -9,6 +9,10 @@
 img
 {
     max-width: 100%;
+    height: 500px;
+    aspect-ratio: 1/1;
+    object-fit: scale-down;
+    height: fit-content
 }
 /* #endregion Common */
 
@@ -26,8 +30,10 @@ img
 /* #region Main */
 .slider
 {   
+    padding-top: 3rem;
     /* max-height: 200px; */
     width: 800px;
+    /* height: 300px; */
     margin: 0 auto;
     position: relative;
 
@@ -45,7 +51,7 @@ img
     .prev
     {
         right: 50%;
-        bottom: 95%;
+        bottom: 85%;
         transform: translateX(50%);
     }
 
